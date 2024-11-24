@@ -1,0 +1,30 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="login.component.css">
+</head>
+
+<body>
+    <div class="center">
+        <h1>Login</h1>
+        <div class="alert alert-primary mb-4" *ngIf="successMsg">
+            {{successMsg}}
+        </div>
+        <div class="alert alert-danger mb-4" *ngIf="errorMsg">
+            {{errorMsg}}
+        </div>
+        <form method="post">
+            <div class="txt_field">
+                <input name="Username" type="text" [(ngModel)]="username" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input name="password" type="password" [(ngModel)]="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <input type="submit" value="Login" (click)="onLogin()">
+        </form>
+    </div>
+
+</body>
