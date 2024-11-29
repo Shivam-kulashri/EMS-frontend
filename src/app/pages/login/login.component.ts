@@ -33,7 +33,7 @@ export class LoginComponent {
           let role=data.role;
           switch(role){
             case 'Hr':
-              console.log('take u to Hr screen');
+              this.router.navigateByUrl("/hr-dashboard")
               break;
 
             case 'Interviewer':
