@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-hr-sidebar',
@@ -9,14 +9,4 @@ import { RouterLink } from '@angular/router';
   styleUrl: './hr-sidebar.component.css'
 })
 export class HrSidebarComponent {
-    linkType: string='';
-     
-    linkClick(linkType:string){
-      this.linkType = linkType;
-    }
-    getClassOn(){
-      return {
-        active: this.linkType === 'schedule'?true: false
-      }
-    }
 }

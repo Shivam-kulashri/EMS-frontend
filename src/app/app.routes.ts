@@ -12,6 +12,9 @@ import { JobChartComponent } from './components/Hr/job-chart/job-chart.component
 import { Component } from '@angular/core';
 import { HrMainComponent } from './components/Hr/hr-main/hr-main.component';
 import { ScheduleInterviewComponent } from './components/Hr/schedule-interview/schedule-interview.component';
+import { PostJobComponent } from './components/Hr/post-job/post-job.component';
+import { ProfileComponent } from './components/Hr/profile/profile.component';
+import { ViewJobComponent } from './components/view-job/view-job.component';
 
 export const routes: Routes = [
 
@@ -30,6 +33,9 @@ export const routes: Routes = [
             { path: 'candidate-list', component: CandidateListComponent },
             { path: 'job-chart', component: JobChartComponent },
             { path: 'hr-main', component: HrMainComponent },
+            { path: 'post-job', component: PostJobComponent},
+            { path: 'profile', component:ProfileComponent},
+            { path: 'view-jobs', component:ViewJobComponent}
         ]
     },
     {

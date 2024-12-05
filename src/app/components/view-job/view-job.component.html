@@ -1,0 +1,29 @@
+<body>
+    <div class="container mt-4">
+        <div class="card mb-4 shadow-sm" *ngFor="let job of jobs">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="card-title text-primary mb-0">{{job.title}}</h5>
+                    <span class="badge bg-success">{{job.jobType}}</span>
+                </div>
+                <p class="text-muted mb-2"><small>Date Posted: {{job.datePosted}} | Application
+                        Deadline: {{job.applicationDeadline}}</small></p>
+                <hr>
+                <p class="card-text">
+                    <strong>Description:</strong> {{job.description}}
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="card-text"><strong>Experience Required:</strong> {{job.experienceRequired}}</p>
+                        <p class="card-text"><strong>Qualifications:</strong> {{job.qualifications}}</p>
+                        <p class="card-text"><strong>Location:</strong>{{job.location}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="card-text"><strong>Salary Range:</strong> {{job.salaryRange}}</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</body>

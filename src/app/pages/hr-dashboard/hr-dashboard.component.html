@@ -1,3 +1,28 @@
-<app-hr-sidebar />
-<app-hr-navbar />
-<router-outlet></router-outlet>
+<!-- <body class="body">
+    <app-hr-navbar></app-hr-navbar>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <app-hr-sidebar></app-hr-sidebar>
+            </div>
+            <div class="col-9">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</body> -->
+
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <app-hr-sidebar></app-hr-sidebar>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Navbar -->
+            <app-hr-navbar></app-hr-navbar>
+            <!-- Router Outlet (Dynamic content area) -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</body>

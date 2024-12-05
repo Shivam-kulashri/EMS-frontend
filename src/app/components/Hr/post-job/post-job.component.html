@@ -1,0 +1,78 @@
+<div class="card">
+    <div class="card-header">
+        <h4>Job Posting</h4>
+    </div>
+    <div class="container mt-4">
+        <div class="alert alert-primary mb-4" *ngIf="successMsg">
+            {{ successMsg }}
+        </div>
+        <div class="alert alert-danger mb-4" *ngIf="errorMsg">
+            {{ errorMsg }}
+        </div>
+        <form [formGroup]="postJob" (ngSubmit)="onFormSubmit()">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="title" class="form-label">Job Title:</label>
+                    <input type="text" class="form-control" formControlName="title">
+                </div>
+                <div class="col-md-6">
+                    <label for="location" class="form-label">Job Location:</label>
+                    <input type="text" class="form-control" formControlName="location">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label for="description" class="form-label">Job Description:</label>
+                    <textarea class="form-control" formControlName="description" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="qualifications" class="form-label">Job Qualifications:</label>
+                    <input type="text" class="form-control" formControlName="qualifications">
+                </div>
+                <div class="col-md-6">
+                    <label for="experienceRequired" class="form-label">Experience Required:</label>
+                    <input type="text" class="form-control" formControlName="experienceRequired">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="jobType" class="form-label">Job Type:</label>
+                    <input type="text" class="form-control" formControlName="jobType">
+                </div>
+                <div class="col-md-6">
+                    <label for="salaryRange" class="form-label">Salary Range:</label>
+                    <input type="text" class="form-control" formControlName="salaryRange">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="datePosted" class="form-label">Date Posted:</label>
+                    <input type="date" class="form-control" formControlName="datePosted">
+                </div>
+                <div class="col-md-6">
+                    <label for="applicationDeadline" class="form-label">Application Deadline:</label>
+                    <input type="date" class="form-control" formControlName="applicationDeadline">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="HR_ID" class="form-label">HR ID:</label>
+                    <input type="number" class="form-control" formControlName="hrId">
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" [disabled]="postJob.invalid" class="btn btn-primary w-50">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

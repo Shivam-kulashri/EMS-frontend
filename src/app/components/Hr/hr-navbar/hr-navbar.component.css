@@ -1,36 +1,4 @@
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.navbar-elements {
-    margin-left: auto;
-}
-
-.form-control {
-    border-radius: 20px;
-}
-
-.dropdown-toggle::after {
-    margin-left: 0.5rem;
-}
-
-.dropdown-menu {
-    border-radius: 10px;
-}
-
-header {
-    background-color: #f8f9fa;
-}
-
-.dropdown img {
-    border: 2px solid #6c757d;
-}
-
-.dropdown-item:hover {
-    background-color: #e9ecef;
-}
-
-.dropdown-divider {
-    margin: 0.5rem 0;
+.navbody{
+    padding: 10px;;
+    background-color: #EEEEEE;
 }

@@ -1,30 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interviewer Panel</title>
-    <link rel="stylesheet" href="hr-sidebar.component.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-
-<body>
-    <div class="sidebar">
-        <h2>Interviewer Panel</h2>
-        <ul>
-            <li>
-                <button [routerLink]="['schedule-interview']">
-                    <i class="fas fa-calendar-plus"></i> Set Interview
-                </button>
-            <li>
-                <button><i class="fas fa-calendar-alt"></i> View Interview Schedule</button>
-            </li>
-            <li>
-                <button><i class="fas fa-user-edit"></i> Update Interview Status</button>
-            </li>
-        </ul>
+<div id="sidebar" class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+        <span class="fs-4">HR Control Panel</span>
     </div>
-</body>
+    <hr>
 
-</html>
+    <!-- Navigation Links -->
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['schedule-interview']">
+                <i class="fas fa-calendar-alt"></i> Schedule Interview
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['post-job']">
+                <i class="fas fa-file-alt"></i> Post Job
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['view-schedule']">
+                <i class="fas fa-eye"></i> View Interview Schedule
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['update-status']">
+                <i class="fas fa-sync-alt"></i> Update Interview Status
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['view-jobs']">
+                <i class="fas fa-briefcase"></i> View All Jobs
+            </a>
+        </li>
+    </ul>
+    <hr>
+
+</div>
