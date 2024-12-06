@@ -30,6 +30,8 @@ export class LoginComponent {
         next:(data)=>{
           localStorage.setItem('token', token);
           localStorage.setItem('username',data.username);
+          localStorage.setItem('userId', data.id);
+          localStorage.setItem('role', data.role);
           let role=data.role;
           switch(role){
             case 'Hr':

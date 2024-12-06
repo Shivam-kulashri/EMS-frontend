@@ -14,7 +14,8 @@ import { HrMainComponent } from './components/Hr/hr-main/hr-main.component';
 import { ScheduleInterviewComponent } from './components/Hr/schedule-interview/schedule-interview.component';
 import { PostJobComponent } from './components/Hr/post-job/post-job.component';
 import { ProfileComponent } from './components/Hr/profile/profile.component';
-import { ViewJobComponent } from './components/view-job/view-job.component';
+import { ViewJobComponent } from './components/Hr/view-job/view-job.component';
+import { ViewInterviewsComponent } from './components/Hr/view-interviews/view-interviews.component';
 
 export const routes: Routes = [
 
@@ -27,15 +28,16 @@ export const routes: Routes = [
 
     {
         path: 'hr-dashboard', component: HrDashboardComponent, children: [
+            { path: '', component:HrMainComponent},
             { path: 'schedule-interview', component: ScheduleInterviewComponent },
             { path: 'top-widget', component: TopWidgetsComponent },
             { path: 'recent-added', component: RecentAddedJobsComponent },
             { path: 'candidate-list', component: CandidateListComponent },
             { path: 'job-chart', component: JobChartComponent },
-            { path: 'hr-main', component: HrMainComponent },
             { path: 'post-job', component: PostJobComponent},
             { path: 'profile', component:ProfileComponent},
-            { path: 'view-jobs', component:ViewJobComponent}
+            { path: 'view-jobs', component:ViewJobComponent},
+            { path: 'view-interview', component:ViewInterviewsComponent}
         ]
     },
     {

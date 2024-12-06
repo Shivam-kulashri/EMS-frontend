@@ -1,0 +1,54 @@
+/* General Table Styling */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Table Header Styling */
+.table thead {
+    background-color: #007bff; /* Blue background */
+    color: white;
+}
+
+/* Table Row Styling */
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey for even rows */
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef; /* Highlight row on hover */
+}
+
+/* Table Border Styling */
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Table Font Styling */
+.table th, .table td {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Last Updated Column Styling */
+.table td:nth-child(7) {
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Interview Mode Column Styling */
+.table td:nth-child(4) {
+    font-weight: bold;
+    color: #28a745; /* Green for 'Online' */
+}
+
+/* Status Column Styling */
+.table td:nth-child(5) {
+    color: #dc3545; /* Red for 'Scheduled' */
+}

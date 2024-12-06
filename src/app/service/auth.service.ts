@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private signupApi='http://localhost:8080/auth/sign-up';
-  private loginApi = 'http://localhost:8080/api/token';
-  private userDetailsApi = 'http://localhost:8080/auth/user';
+  private signupApi='http://localhost:8081/auth/sign-up';
+  private loginApi = 'http://localhost:8081/api/token';
+  private userDetailsApi = 'http://localhost:8081/auth/user';
 
   constructor(private httpclient: HttpClient){}
     
@@ -17,7 +17,7 @@ export class AuthService {
       return this.httpclient.post(this.signupApi,user);
     }
   
-    login(user: any): Observable<any> {
+  login(user: any): Observable<any> {
       return this.httpclient.post(this.loginApi, user);
   }
   getUserDetails(token: any): Observable<any>{

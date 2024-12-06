@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { HrService } from '../../service/hr.service';
+import { HrService } from '../../../service/hr.service';
 
 @Component({
   selector: 'app-view-job',

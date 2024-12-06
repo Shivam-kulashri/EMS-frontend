@@ -6,12 +6,27 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HrService {
-  addJobApi='http://localhost:8080/job/add'
-  getAllJobsApi='http://localhost:8080/batch/all'
-  getAllInterviw='http://localhost:8080/interviewschedular/all'
+  addJobApi='http://localhost:8081/job/add'
+  getAllJobsApi='http://localhost:8081/job/all'
+  getAllInterviw='http://localhost:8081/interviewschedular/all'
+  addHrApi='http://localhost:8081/hr/addHr'
 
 
   constructor(private httpClient: HttpClient) {  
+  }
+
+  public addHr(obj:any): Observable<any>{
+    let hr_obj={
+      emailId:obj.emailId,
+      contact:obj.contact,
+      name:obj.name,
+      user:{
+        id:obj.userid,
+        role:obj.role
+      }
+    }
+    console.log(hr_obj);
+    return this.httpClient.post(this.addHrApi,hr_obj);
   }
 
   public getAllJobs(){
