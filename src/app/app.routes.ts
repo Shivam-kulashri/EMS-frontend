@@ -16,16 +16,24 @@ import { ProfileComponent } from './components/Hr/profile/profile.component';
 import { ViewJobComponent } from './components/Hr/view-job/view-job.component';
 import { ViewInterviewsComponent } from './components/Hr/view-interviews/view-interviews.component';
 import { OnboardCandidateComponent } from './components/Hr/onboard-candidate/onboard-candidate.component';
+import { GetRolesComponent } from './pages/get-roles/get-roles.component';
+import { UserOptionComponent } from './pages/user-option/user-option.component';
+import { InterviewerDashboardComponent } from './pages/interviewer-dashboard/interviewer-dashboard.component';
+import { InterviewerMainComponent } from './components/Interviewer/interviewer-main/interviewer-main.component';
+import { InterviewerProfileComponent } from './components/Interviewer/interviewer-profile/interviewer-profile.component';
+import { InterviewerSidebarComponent } from './components/Interviewer/interviewer-sidebar/interviewer-sidebar.component';
 
 export const routes: Routes = [
 
     {
         path: '', component:LandingPageComponent
     },
-    // {
-    //     path: '', component:DashboardPageComponent
-    // },
-
+    {
+        path: 'user-option', component:UserOptionComponent
+    },
+    {
+        path: 'get-roles', component:GetRolesComponent
+    },
     {
         path: 'hr-dashboard', component: HrDashboardComponent, children: [
             { path: '', component:HrMainComponent},
@@ -41,7 +49,17 @@ export const routes: Routes = [
         ]
     },
     {
+        path: 'interviewer-dashboard', component: InterviewerDashboardComponent, children:[
+            {path: '', component:InterviewerMainComponent},
+            {path: 'iprofile', component:InterviewerProfileComponent},
+            {path: 'isidebar', component:InterviewerSidebarComponent}
+        ]
+    },
+    {
         path: 'sign-up', component: SignupComponent
+    },
+    {
+        path: 'get-roles', component: GetRolesComponent
     },
 
     {

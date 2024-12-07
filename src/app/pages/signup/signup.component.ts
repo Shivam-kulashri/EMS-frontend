@@ -14,17 +14,19 @@ export class SignupComponent {
 
   username: string ="";
   password: string ="";
-  role: string="";
+  name: string="";
+  role: any=localStorage.getItem('grole');
   errorMsg: string | undefined;
   successMsg: string | undefined;
 
   constructor(private authService: AuthService){}
 
+  item: any = localStorage.removeItem('grole');
   onSignUp(){
     this.authService.signup({
-    //this.authService.signUp({
     username: this.username,
     password: this.password,
+    name: this.name,
     role:this.role
   }).subscribe({
     next: (data)=>{

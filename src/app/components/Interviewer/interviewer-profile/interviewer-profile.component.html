@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header">
+            <h4 class="mb-0">Dear Interviewer! Enter you details</h4>
+        </div>
+        <div class="alert alert-primary mb-4" *ngIf="successMsg">
+            {{ successMsg }}
+        </div>
+        <div class="alert alert-danger mb-4" *ngIf="errorMsg">
+            {{ errorMsg }}
+        </div>
+        <div class="card-body">
+            <form [formGroup]="interviewerRegister" (ngSubmit)="onFormSubmit()">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your name" formControlName="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter your email" formControlName="emailId">
+                </div>
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact</label>
+                    <input type="text" class="form-control" placeholder="Enter your contact number"
+                        formControlName="contact">
+                </div>
+                <div class="mb-3">
+                    <label for="interviewSpeciality" class="form-label">Interview Speciality</label>
+                    <input type="text" class="form-control" placeholder="Enter your interview Speciality"
+                        formControlName="interviewSpeciality">
+                </div>
+                <div class="mb-3">
+                    <label for="position" class="form-label">Position</label>
+                    <input type="text" class="form-control" placeholder="Enter your position in Company"
+                        formControlName="position">
+                </div>
+                <button type="submit" [disabled]="interviewerRegister.invalid" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

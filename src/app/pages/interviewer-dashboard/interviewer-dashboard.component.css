@@ -1,0 +1,49 @@
+/* General Body Style */
+body {
+    margin: 0;
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Wrapper that contains both sidebar and content */
+  .dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Sidebar Style - Fixed on the left */
+  app-interviewer-sidebar {
+    width: 280px; /* Width of Sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full height */
+    overflow-y: auto;
+  }
+  
+  /* Main Content Style - Takes remaining space */
+  .main-content {
+    margin-left: 280px; /* Sidebar width */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Navbar Style - Sticks at the top */
+  app-interviewer-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps navbar on top */
+    width: 100%; /* Ensures navbar fills the entire width */
+    box-sizing: border-box; /* Ensure the padding doesn't affect the layout */
+  }
+  
+  /* Content Area under Navbar */
+  .router-outlet {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling in case of overflow */
+    margin-top: 60px; /* Adjust based on the navbar height, here it assumes 60px height */
+  }
+  

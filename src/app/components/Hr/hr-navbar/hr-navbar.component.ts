@@ -8,5 +8,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './hr-navbar.component.css'
 })
 export class HrNavbarComponent {
-
+ name:any=localStorage.getItem('name');
 }

@@ -1,93 +1,193 @@
-/* General reset */
+/* Start Global Rules */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  /* Full-page gradient background */
-  body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(120deg, #2980b9, #8e44ad);
-  }
-  
-  /* Centered white box */
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
   .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 750px;
   }
-  
-  .box {
-    display: flex;
-    background: #fff;
-    padding: 40px 60px;
-    border-radius: 15px;
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+/* Start Landing Page */
+.landing-page header {
+  min-height: 80px;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .landing-page header {
+    min-height: auto;
+    display: initial;
+  }
+}
+.landing-page header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .landing-page header .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.landing-page header .logo {
+  color: #5d5d5d;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .landing-page header .logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.landing-page header .links {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .landing-page header .links {
     text-align: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    width: 700px;
-    align-items: center;
+    gap: 10px;
   }
-  
-  /* Text section */
-  .text-section {
-    flex: 1;
+}
+.landing-page header .links li {
+  margin-left: 30px;
+  color: #5d5d5d;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+@media (max-width: 767px) {
+  .landing-page header .links li {
+    margin-left: auto;
   }
-  
-  .text-section h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #333;
-    font-weight: 700;
-  }
-  
-  
-  /* Buttons styling */
-  .buttons {
-    display: flex;
-    gap: 20px;
+}
+.landing-page header .links li:hover {
+  color: #4158d0;
+  transform: scale(1.1); /* Slight zoom effect */
+}
+.landing-page header .links li:last-child {
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #FFF;
+  background: linear-gradient(to right, #4158d0, #c850c0, #ffcc70);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.landing-page header .links li:last-child:hover {
+  transform: translateY(-2px); /* Raise the button slightly */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+.landing-page header .links li:last-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Glossy effect */
+  transform: skewX(-45deg);
+  transition: left 0.5s ease;
+}
+.landing-page header .links li:last-child:hover::before {
+  left: 100%; /* Animate the glossy effect */
+}
+
+.landing-page .content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  min-height: calc(100vh - 80px);
+}
+@media (max-width: 767px) {
+  .landing-page .content .container {
+    gap: 0;
+    min-height: calc(100vh - 101px);
     justify-content: center;
-    margin-top: auto;
+    flex-direction: column-reverse;
   }
-  
-  .btn {
-    background-color: #2691d9;
-    color: #fff;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(38, 145, 217, 0.4);
-    width: 120px;
+}
+@media (max-width: 767px) {
+  .landing-page .content .info {
+    text-align: center;
+    margin-bottom: 15px;
   }
-  
-  /* Cool button effects */
-  .btn:hover {
-    background-color: #1a6ca6;
-    box-shadow: 0 6px 15px rgba(26, 108, 166, 0.5);
-    transform: translateY(-3px);
-  }
-  
-  /* Image section */
-  .image-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
+}
+.landing-page .content .info h1 {
+  color: #5d5d5d;
+  font-size: 44px;
+}
+.landing-page .content .info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #5d5d5d;
+}
+.landing-page .content .info button {
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #FFF;
+  background: linear-gradient(to right, #4158d0, #c850c0, #ffcc70);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.landing-page .content .info button:hover {
+  transform: translateY(-2px); /* Raise the button slightly */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+.landing-page .content .info button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Glossy effect */
+  transform: skewX(-45deg);
+  transition: left 0.5s ease;
+}
+.landing-page .content .info button:hover::before {
+  left: 100%; /* Animate the glossy effect */
+}
+.landing-page .content .image img {
+  max-width: 100%;
+}
+/* End Landing Page */

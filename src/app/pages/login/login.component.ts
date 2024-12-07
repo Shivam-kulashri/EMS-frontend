@@ -32,6 +32,7 @@ export class LoginComponent {
           localStorage.setItem('username',data.username);
           localStorage.setItem('userId', data.id);
           localStorage.setItem('role', data.role);
+          localStorage.setItem('name',data.name);
           let role=data.role;
           switch(role){
             case 'Hr':
@@ -39,7 +40,7 @@ export class LoginComponent {
               break;
 
             case 'Interviewer':
-              console.log('take u to Interviewer screen')
+              this.router.navigateByUrl("/interviewer-dashboard")
               break;
 
             default:
