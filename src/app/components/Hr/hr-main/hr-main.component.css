@@ -1,0 +1,45 @@
+.dashboard-home {
+    padding: 20px; /* Padding for the entire dashboard */
+  }
+  
+  .card {
+    height: 150px; /* Fixed height for all cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: none; /* Remove border for cleaner look */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between; /* Equal spacing between cards */
+    gap: 20px; /* Space between cards */
+    margin: 0; /* Remove extra margin */
+  }
+  
+  .card-title {
+    font-size: 18px; /* Adjust font size for title */
+    font-weight: bold; /* Bold title */
+    text-align: center;
+  }
+  
+  .card-text {
+    text-align: center; /* Center-align card content */
+    font-size: 14px; /* Adjust font size */
+    opacity: 0.8; /* Subtle text style */
+  }
+  
+  .row.mb-4 {
+    margin-bottom: 30px; /* Add spacing between first and second row */
+  }
+  
+  .dashboard-home .row:first-child .col-md-4 {
+    flex: 1; /* Equal width for top row cards */
+  }
+  
+  .dashboard-home .row:last-child .col-md-6 {
+    flex: 1; /* Equal width for bottom row cards */
+  }
+  

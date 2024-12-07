@@ -3,6 +3,7 @@
         <table class="table table-bordered table-striped table-hover">
             <thead class="thead-dark">
                 <tr>
+                    <th scope="col">#</th>
                     <th scope="col">Interview Date</th>
                     <th scope="col">Interview Time</th>
                     <th scope="col">Interview Mode</th>
@@ -13,16 +14,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>2024-11-15</td>
-                    <td>10:00 AM</td>
-                    <td>Online</td>
-                    <td>Scheduled</td>
-                    <td>Technical</td>
-                    <td>2024-11-08T12:34:56</td>
-                    <td>Imtiyaz Hirani</td>
+                <tr *ngFor="let interview of interviews; let i=index">
+                    <th scope="row">{{++i}}</th>
+                    <td>{{interview.interviewDate}}</td>
+                    <td>{{interview.interviewTime}}</td>
+                    <td>{{interview.interviewMode}}</td>
+                    <td>{{interview.interviewStatus}}</td>
+                    <td>{{interview.interviewType}}</td>
+                    <td>{{interview.lastUpdated}}</td>
+                    <td>{{interview.interviewer.name}}</td>
                 </tr>
-                <!-- Add more rows as needed -->
             </tbody>
         </table>
     </div>

@@ -6,11 +6,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HrService {
-  addJobApi='http://localhost:8081/job/add'
-  getAllJobsApi='http://localhost:8081/job/all'
-  getAllInterviw='http://localhost:8081/interviewschedular/all'
-  addHrApi='http://localhost:8081/hr/addHr'
-
+  private addJobApi='http://localhost:8081/job/add'
+  private getAllJobsApi='http://localhost:8081/job/all'
+  private getAllInterviw='http://localhost:8081/interviewschedular/all'
+  private addHrApi='http://localhost:8081/hr/addHr'
+  private getApplicantDetailsApi='http://localhost:8081/hr/getApplicantDetails'
+  private getInterviewScheduleApi='http://localhost:8081/interviewschedular/all'  
+  private getClearedApplicantApi='http://localhost:8081/application/getAllCleared'
 
   constructor(private httpClient: HttpClient) {  
   }
@@ -50,5 +52,16 @@ export class HrService {
     }
 
     return this.httpClient.post(this.addJobApi,job_obj);
+  }
+
+  public getApplicantDetails(){
+    return this.httpClient.get(this.getApplicantDetailsApi);
+  }
+
+  public getInterviewSchedule(){
+    return this.httpClient.get(this.getInterviewScheduleApi);
+  }
+  public getClearedApplicants(){
+    return this.httpClient.get(this.getClearedApplicantApi);
   }
 }
