@@ -11,11 +11,11 @@ import { CandidateListComponent } from './components/Hr/candidate-list/candidate
 import { JobChartComponent } from './components/Hr/job-chart/job-chart.component';
 import { Component } from '@angular/core';
 import { HrMainComponent } from './components/Hr/hr-main/hr-main.component';
-import { ScheduleInterviewComponent } from './components/Hr/schedule-interview/schedule-interview.component';
 import { PostJobComponent } from './components/Hr/post-job/post-job.component';
 import { ProfileComponent } from './components/Hr/profile/profile.component';
 import { ViewJobComponent } from './components/Hr/view-job/view-job.component';
 import { ViewInterviewsComponent } from './components/Hr/view-interviews/view-interviews.component';
+import { OnboardCandidateComponent } from './components/Hr/onboard-candidate/onboard-candidate.component';
 
 export const routes: Routes = [
 
@@ -29,7 +29,7 @@ export const routes: Routes = [
     {
         path: 'hr-dashboard', component: HrDashboardComponent, children: [
             { path: '', component:HrMainComponent},
-            { path: 'schedule-interview', component: ScheduleInterviewComponent },
+            { path: 'onboard-candidate', component: OnboardCandidateComponent },
             { path: 'top-widget', component: TopWidgetsComponent },
             { path: 'recent-added', component: RecentAddedJobsComponent },
             { path: 'candidate-list', component: CandidateListComponent },

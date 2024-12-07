@@ -13,8 +13,17 @@ export class HrService {
   private getApplicantDetailsApi='http://localhost:8081/hr/getApplicantDetails'
   private getInterviewScheduleApi='http://localhost:8081/interviewschedular/all'  
   private getClearedApplicantApi='http://localhost:8081/application/getAllCleared'
+  private updateApplicationApi='http://localhost:8081/application/update/'
+  private getOnboardedApplicantApi='http://localhost:8081/application/getAllOnboarded'
 
   constructor(private httpClient: HttpClient) {  
+  }
+
+  public updateApplication(id:any): Observable<any>{
+    let app_obj={
+      applicationStatus:'Onboarded'
+    }
+    return this.httpClient.put(this.updateApplicationApi+id,app_obj);
   }
 
   public addHr(obj:any): Observable<any>{
@@ -63,5 +72,8 @@ export class HrService {
   }
   public getClearedApplicants(){
     return this.httpClient.get(this.getClearedApplicantApi);
+  }
+  public getOnboardedApplicants(){
+    return this.httpClient.get(this.getOnboardedApplicantApi);
   }
 }
