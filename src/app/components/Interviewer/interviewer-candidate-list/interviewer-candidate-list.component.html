@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="container mt-4">
+        <div class="card-header">
+            <h4> Candidate List</h4>
+        </div>
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Job Seeker Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Job Title</th>
+                    <th scope="col">Application Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let applicant of applicants; let i = index">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ applicant.jobSeekerName }}</td>
+                    <td>{{ applicant.email }}</td>
+                    <td>{{ applicant.jobTitle }}</td>
+                    <td>
+                        <button class="btn status-btn" [ngClass]="{
+                                'btn-purple': applicant.applicationStatus === 'Onboarded',
+                                'btn-blue': applicant.applicationStatus === 'Applied',
+                                'btn-red': applicant.applicationStatus === 'Rejected',
+                                'btn-green': applicant.applicationStatus === 'Cleared',
+                                'btn-yellow': applicant.applicationStatus === 'Under Review'
+                            }">
+                            {{ applicant.applicationStatus }}
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

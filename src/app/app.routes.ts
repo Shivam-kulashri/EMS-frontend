@@ -22,6 +22,11 @@ import { InterviewerDashboardComponent } from './pages/interviewer-dashboard/int
 import { InterviewerMainComponent } from './components/Interviewer/interviewer-main/interviewer-main.component';
 import { InterviewerProfileComponent } from './components/Interviewer/interviewer-profile/interviewer-profile.component';
 import { InterviewerSidebarComponent } from './components/Interviewer/interviewer-sidebar/interviewer-sidebar.component';
+import { InterviewerUpdateInterviewDetailsComponent } from './components/Interviewer/interviewer-update-interview-details/interviewer-update-interview-details.component';
+import { InterviewerCandidateListComponent } from './components/Interviewer/interviewer-candidate-list/interviewer-candidate-list.component';
+import { InterviewerSeeAllInterviewComponent } from './components/Interviewer/interviewer-see-all-interview/interviewer-see-all-interview.component';
+import { InterviewerScheduleInterviewComponent } from './components/Interviewer/interviewer-schedule-interview/interviewer-schedule-interview.component';
+import { InterviewerUpdateApplicationComponent } from './components/Interviewer/interviewer-update-application/interviewer-update-application.component';
 
 export const routes: Routes = [
 
@@ -52,7 +57,12 @@ export const routes: Routes = [
         path: 'interviewer-dashboard', component: InterviewerDashboardComponent, children:[
             {path: '', component:InterviewerMainComponent},
             {path: 'iprofile', component:InterviewerProfileComponent},
-            {path: 'isidebar', component:InterviewerSidebarComponent}
+            {path: 'isidebar', component:InterviewerSidebarComponent},
+            {path: 'iupdate', component: InterviewerUpdateInterviewDetailsComponent},
+            {path: 'icandidate-list', component: InterviewerCandidateListComponent},
+            {path: 'iall-interview', component: InterviewerSeeAllInterviewComponent},
+            {path: 'ischedule', component: InterviewerScheduleInterviewComponent},
+            {path: 'iupdateApplication', component: InterviewerUpdateApplicationComponent}
         ]
     },
     {

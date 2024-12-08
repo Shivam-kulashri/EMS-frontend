@@ -30,6 +30,7 @@ export class InterviewerProfileComponent {
       this.interviewerService.addInterviewer(this.interviewerRegister.value).subscribe({
         next:data=>{
           this.successMsg="Added Interviewer Profile! Your Interviewer ID is:"+data.id;
+          localStorage.setItem('id',data.id)
         },
         error:(err)=>{
           this.errorMsg="Sorry, Couldn't Add Profile !"

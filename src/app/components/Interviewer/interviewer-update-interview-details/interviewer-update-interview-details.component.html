@@ -1,0 +1,40 @@
+<div class="form-container">
+    <h1>Interview Details</h1>
+    <div class="alert alert-primary mb-4" *ngIf="successMsg">
+        {{ successMsg }}
+    </div>
+    <div class="alert alert-danger mb-4" *ngIf="errorMsg">
+        {{ errorMsg }}
+    </div>
+    <form (ngSubmit)="onFormSubmit()">
+        <div class="form-group">
+            <label for="interviewDate">Interview Date</label>
+            <input type="date" id="interviewDate" [(ngModel)]="interviewers.interviewDate" name="interviewDate">
+        </div>
+        <div class="form-group">
+            <label for="interviewTime">Interview Time</label>
+            <input type="time" id="interviewTime" [(ngModel)]="interviewers.interviewTime" name="interviewTime">
+        </div>
+        <div class="form-group">
+            <label for="interviewMode">Interview Mode</label>
+            <select id="interviewMode" [(ngModel)]="interviewers.interviewMode" name="interviewMode">
+                <option value="Online">Online</option>
+                <option value="In person">In person</option>
+                <option value="Phone Call">Phone Call</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="interviewStatus">Interview Status</label>
+            <input type="text" id="interviewStatus" [(ngModel)]="interviewers.interviewStatus" name="interviewStatus">
+        </div>
+        <div class="form-group">
+            <label for="interviewType">Interview Type</label>
+            <input type="text" id="interviewType" [(ngModel)]="interviewers.interviewType" name="interviewType">
+        </div>
+        <div class="form-group">
+            <label for="lastUpdated">Last Updated</label>
+            <input type="datetime-local" id="lastUpdated" [(ngModel)]="interviewers.lastUpdated" name="lastUpdated">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>

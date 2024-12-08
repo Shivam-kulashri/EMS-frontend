@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="container mt-4">
+        <div class="card-header">
+            <h4> Candidate List</h4>
+        </div>
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Job Seeker Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Job Title</th>
+                    <th scope="col">Application Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let applicant of applicants; let i = index">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ applicant.jobSeekerName }}</td>
+                    <td>{{ applicant.email }}</td>
+                    <td>{{ applicant.jobTitle }}</td>
+                    <td>
+                        <span [ngClass]="{
+                            'badge-success': applicant.applicationStatus === 'Cleared',
+                            'badge-primary': applicant.applicationStatus === 'Applied',
+                            'badge-warning': applicant.applicationStatus === 'Under Review',
+                            'badge-danger': applicant.applicationStatus === 'Rejected',
+                            'badge-purple': applicant.applicationStatus === 'Onboarded'
+                        }" class="badge">
+                            {{ applicant.applicationStatus }}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Change Status
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li *ngFor="let status of statuses">
+                                    <a class="dropdown-item" (click)="changeStatus(applicant.applicationId, status)">{{
+                                        status }}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

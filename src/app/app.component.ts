@@ -5,7 +5,7 @@ import { LoginHeaderComponent } from "./components/login-header/login-header.com
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, LoginHeaderComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

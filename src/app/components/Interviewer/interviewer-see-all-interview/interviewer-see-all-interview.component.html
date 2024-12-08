@@ -1,0 +1,32 @@
+<div class="table-container">
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Mode</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Last Updated</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let interview of interviews; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ interview.interviewDate }}</td>
+                <td>{{ interview.interviewTime }}</td>
+                <td>{{ interview.interviewMode }}</td>
+                <td>{{ interview.interviewStatus }}</td>
+                <td>{{ interview.interviewType }}</td>
+                <td>{{ interview.lastUpdated }}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="updateInterview(interview.interviewId)">
+                        Update
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

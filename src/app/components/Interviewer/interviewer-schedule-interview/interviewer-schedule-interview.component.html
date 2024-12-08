@@ -1,0 +1,40 @@
+<div class="form-container">
+    <h1>Interview Details</h1>
+    <div class="alert alert-primary mb-4" *ngIf="successMsg">
+        {{ successMsg }}
+    </div>
+    <div class="alert alert-danger mb-4" *ngIf="errorMsg">
+        {{ errorMsg }}
+    </div>
+    <form [formGroup]="interviewForm" (ngSubmit)="onFormSubmit()">
+        <div class="form-group">
+            <label for="interviewDate">Interview Date</label>
+            <input type="date" id="interviewDate" formControlName="interviewDate" />
+        </div>
+        <div class="form-group">
+            <label for="interviewTime">Interview Time</label>
+            <input type="time" id="interviewTime" formControlName="interviewTime" />
+        </div>
+        <div class="form-group">
+            <label for="interviewMode">Interview Mode</label>
+            <select id="interviewMode" formControlName="interviewMode">
+                <option value="Online">Online</option>
+                <option value="In person">In person</option>
+                <option value="Phone Call">Phone Call</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="interviewStatus">Interview Status</label>
+            <input type="text" id="interviewStatus" formControlName="interviewStatus" />
+        </div>
+        <div class="form-group">
+            <label for="interviewType">Interview Type</label>
+            <input type="text" id="interviewType" formControlName="interviewType" />
+        </div>
+        <div class="form-group">
+            <label for="lastUpdated">Last Updated</label>
+            <input type="datetime-local" id="lastUpdated" formControlName="lastUpdated" />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
