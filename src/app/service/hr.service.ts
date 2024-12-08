@@ -16,11 +16,11 @@ export class HrService {
   private updateApplicationApi='http://localhost:8081/application/update/'
   private getOnboardedApplicantApi='http://localhost:8081/application/getAllOnboarded'
   private getAllCandidatesApi='http://localhost:8081/application/all'
+  private getJobsPagebleApi='http://localhost:8081/jobs/pagable/all'
 
 
   constructor(private httpClient: HttpClient) {  
   }
-
 
   public getAllCandidates(){
     return this.httpClient.get(this.getAllCandidatesApi);
@@ -33,6 +33,9 @@ export class HrService {
     return this.httpClient.put(this.updateApplicationApi+id,app_obj);
   }
 
+  public getJobPageble(page:number,size:number): Observable<any>{
+    return this.httpClient.get(this.getJobsPagebleApi+'?page='+page+'&size='+size)
+  }
   public addHr(obj:any): Observable<any>{
     let hr_obj={
       emailId:obj.emailId,

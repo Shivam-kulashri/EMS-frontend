@@ -1,5 +1,8 @@
 <div class="form-container">
-    <h1>Interview Details</h1>
+    <div class="card-header">
+        <h2>Interview Details</h2>
+    </div>
+    <hr>
     <div class="alert alert-primary mb-4" *ngIf="successMsg">
         {{ successMsg }}
     </div>
@@ -35,6 +38,7 @@
             <label for="lastUpdated">Last Updated</label>
             <input type="datetime-local" id="lastUpdated" formControlName="lastUpdated" />
         </div>
+        <hr>
         <button type="submit">Submit</button>
     </form>
 </div>

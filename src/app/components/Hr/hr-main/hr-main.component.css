@@ -23,7 +23,7 @@ body {
 .dashboard-title {
   text-align: center;
   color: #333;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 40px;
   text-transform: uppercase;
@@ -60,8 +60,8 @@ body {
   padding: 10px 0;
   text-align: center;
   color: #fff;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 750;
 }
 
 /* Card Types - Primary, Warning, Success, etc. */

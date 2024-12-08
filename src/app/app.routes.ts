@@ -26,11 +26,15 @@ import { InterviewerSeeAllInterviewComponent } from './components/Interviewer/in
 import { InterviewerScheduleInterviewComponent } from './components/Interviewer/interviewer-schedule-interview/interviewer-schedule-interview.component';
 import { InterviewerUpdateApplicationComponent } from './components/Interviewer/interviewer-update-application/interviewer-update-application.component';
 import { UpcomingInterviewComponent } from './components/Hr/upcoming-interview/upcoming-interview.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 export const routes: Routes = [
 
     {
         path: '', component:LandingPageComponent
+    },
+    {
+        path:'about-us', component:AboutUsComponent
     },
     {
         path: 'user-option', component:UserOptionComponent
@@ -53,11 +57,10 @@ export const routes: Routes = [
     },
     {
         path: 'interviewer-dashboard', component: InterviewerDashboardComponent, children:[
-            {path: '', component:InterviewerMainComponent},
+            {path: '', component: InterviewerCandidateListComponent},
             {path: 'iprofile', component:InterviewerProfileComponent},
             {path: 'isidebar', component:InterviewerSidebarComponent},
             {path: 'iupdate', component: InterviewerUpdateInterviewDetailsComponent},
-            {path: 'icandidate-list', component: InterviewerCandidateListComponent},
             {path: 'iall-interview', component: InterviewerSeeAllInterviewComponent},
             {path: 'ischedule', component: InterviewerScheduleInterviewComponent},
             {path: 'iupdateApplication', component: InterviewerUpdateApplicationComponent}

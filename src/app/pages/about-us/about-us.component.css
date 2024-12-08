@@ -1,0 +1,197 @@
+/* Start About Us Page */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+/* Start About Us Page */
+.about-us-page header {
+  min-height: 80px;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .about-us-page header {
+    min-height: auto;
+    display: initial;
+  }
+}
+.about-us-page header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .about-us-page header .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.about-us-page header .logo {
+  color: #5d5d5d;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .about-us-page header .logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.about-us-page header .links {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .about-us-page header .links {
+    text-align: center;
+    gap: 10px;
+  }
+}
+.about-us-page header .links li {
+  margin-left: 30px;
+  color: #5d5d5d;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+@media (max-width: 767px) {
+  .about-us-page header .links li {
+    margin-left: auto;
+  }
+}
+.about-us-page header .links li:hover {
+  color: #4158d0;
+  transform: scale(1.1); /* Slight zoom effect */
+}
+.about-us-page header .links li:last-child {
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #FFF;
+  background: linear-gradient(to right, #4158d0, #c850c0, #ffcc70);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-us-page header .links li:last-child:hover {
+  transform: translateY(-2px); /* Raise the button slightly */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+.about-us-page header .links li:last-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Glossy effect */
+  transform: skewX(-45deg);
+  transition: left 0.5s ease;
+}
+.about-us-page header .links li:last-child:hover::before {
+  left: 100%; /* Animate the glossy effect */
+}
+
+.about-us-page .content {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us-page .about-info {
+    text-align: left;
+    max-width: 700px;
+    margin-bottom: 50px;
+  }
+  .about-us-page .about-info h1 {
+    font-size: 42px;
+    color: #5d5d5d;
+    margin-bottom: 20px;
+  }
+  .about-us-page .about-info p {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #5d5d5d;
+  }
+  .about-us-page .about-image {
+    display: flex;
+    justify-content: center;
+  }
+  .about-us-page .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  .about-us-page .values {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    width: 100%;
+  }
+  .about-us-page .values .container {
+    text-align: center;
+  }
+  .about-us-page .values h2 {
+    font-size: 36px;
+    color: #5d5d5d;
+    margin-bottom: 30px;
+  }
+  .about-us-page .value-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .about-us-page .value-item {
+    max-width: 300px;
+    text-align: left;
+  }
+  .about-us-page .value-item h3 {
+    font-size: 22px;
+    color: #4158d0;
+    margin-bottom: 10px;
+  }
+  .about-us-page .value-item p {
+    font-size: 14px;
+    color: #5d5d5d;
+  }
+
+  .about-image{
+    width: 100%;
+  }
+  /* End About Us Page */
+  

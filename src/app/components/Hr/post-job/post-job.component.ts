@@ -13,6 +13,7 @@ export class PostJobComponent {
   postJob: FormGroup;
   successMsg:string|undefined;
   errorMsg:string|undefined;
+  hr_id:any=localStorage.getItem('hr_id');
 
   constructor(private hrService: HrService){
     this.postJob=new FormGroup({

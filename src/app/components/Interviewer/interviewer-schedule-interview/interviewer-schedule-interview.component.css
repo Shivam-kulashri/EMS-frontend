@@ -55,3 +55,13 @@ body {
     background: linear-gradient(to right, #ffcc70, #c850c0, #4158d0);
   }
   
+  .card-header{
+    background: linear-gradient(to right, #4158d0, #c850c0, #ffcc70); /* Add a professional blue background */
+    color: white; /* Contrast text color */
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
