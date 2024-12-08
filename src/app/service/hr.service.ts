@@ -15,8 +15,15 @@ export class HrService {
   private getClearedApplicantApi='http://localhost:8081/application/getAllCleared'
   private updateApplicationApi='http://localhost:8081/application/update/'
   private getOnboardedApplicantApi='http://localhost:8081/application/getAllOnboarded'
+  private getAllCandidatesApi='http://localhost:8081/application/all'
+
 
   constructor(private httpClient: HttpClient) {  
+  }
+
+
+  public getAllCandidates(){
+    return this.httpClient.get(this.getAllCandidatesApi);
   }
 
   public updateApplication(id:any): Observable<any>{

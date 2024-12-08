@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HrService } from '../../../service/hr.service';
 
 @Component({
   selector: 'app-interviewer-main',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './interviewer-main.component.css'
 })
 export class InterviewerMainComponent {
-
+  
+  
 }

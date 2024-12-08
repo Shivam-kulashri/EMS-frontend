@@ -1,0 +1,11 @@
+<div class="container-custom">
+    <div *ngFor="let interview of recentFive" class="custom-card">
+        <p class="custom-details">
+            <strong>ID:</strong>{{ interview.interviewId }}|<strong>Date:</strong>{{ interview.interviewDate }}
+            |<Strong>Time:</Strong> {{ interview.interviewTime }} |<strong>Mode:</strong>
+            {{ interview.interviewMode }} |<strong>Type:</strong> {{ interview.interviewType }}
+            |<strong>Interviewer:</strong>
+            {{ interview.interviewer.name }}
+        </p>
+    </div>
+</div>

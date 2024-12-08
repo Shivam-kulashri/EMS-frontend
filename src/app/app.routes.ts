@@ -5,8 +5,6 @@ import { LoginHeaderComponent } from './components/login-header/login-header.com
 import { LoginComponent } from './pages/login/login.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { HrDashboardComponent } from './pages/hr-dashboard/hr-dashboard.component';
-import { TopWidgetsComponent } from './components/Hr/top-widgets/top-widgets.component';
-import { RecentAddedJobsComponent } from './components/Hr/recent-added-jobs/recent-added-jobs.component';
 import { CandidateListComponent } from './components/Hr/candidate-list/candidate-list.component';
 import { JobChartComponent } from './components/Hr/job-chart/job-chart.component';
 import { Component } from '@angular/core';
@@ -27,6 +25,7 @@ import { InterviewerCandidateListComponent } from './components/Interviewer/inte
 import { InterviewerSeeAllInterviewComponent } from './components/Interviewer/interviewer-see-all-interview/interviewer-see-all-interview.component';
 import { InterviewerScheduleInterviewComponent } from './components/Interviewer/interviewer-schedule-interview/interviewer-schedule-interview.component';
 import { InterviewerUpdateApplicationComponent } from './components/Interviewer/interviewer-update-application/interviewer-update-application.component';
+import { UpcomingInterviewComponent } from './components/Hr/upcoming-interview/upcoming-interview.component';
 
 export const routes: Routes = [
 
@@ -43,8 +42,7 @@ export const routes: Routes = [
         path: 'hr-dashboard', component: HrDashboardComponent, children: [
             { path: '', component:HrMainComponent},
             { path: 'onboard-candidate', component: OnboardCandidateComponent },
-            { path: 'top-widget', component: TopWidgetsComponent },
-            { path: 'recent-added', component: RecentAddedJobsComponent },
+            { path: 'upcomingIw', component: UpcomingInterviewComponent},
             { path: 'candidate-list', component: CandidateListComponent },
             { path: 'job-chart', component: JobChartComponent },
             { path: 'post-job', component: PostJobComponent},

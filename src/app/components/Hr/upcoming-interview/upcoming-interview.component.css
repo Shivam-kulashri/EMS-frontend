@@ -1,0 +1,60 @@
+/* Custom styling for the upcoming interviews container */
+.container-custom {
+    width: 100%; /* Full width */
+    height: 100%; /* Ensures it fills the card */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow-y: auto; /* Enables scrolling */
+}
+
+.custom-card {
+    width: 100%; /* Ensure full width of container */
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #fe9191); /* Gradient theme */
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    color: white;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.custom-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.custom-details {
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+/* Ensures the Card 5 and the Upcoming Interview container behaves well */
+.dashboard-home .row.mt-4 .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensures column stretches */
+}
+
+.card-body {
+    flex-grow: 1; /* Ensures content fills the available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space equally */
+}
+
+.card-footer {
+    margin-top: 15px;
+    text-align: center;
+}

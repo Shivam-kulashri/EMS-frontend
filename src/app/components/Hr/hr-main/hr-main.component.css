@@ -1,45 +1,162 @@
+/* General page styling */
+body {
+  background-color: #f0f2f5; /* Light background for the page */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .dashboard-home {
-    padding: 20px; /* Padding for the entire dashboard */
-  }
-  
-  .card {
-    height: 150px; /* Fixed height for all cards */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border: none; /* Remove border for cleaner look */
-    border-radius: 10px; /* Rounded corners */
-  }
-  
+  padding: 30px;
+  max-width: 100%;
+  margin: auto;
+  background: white; /* Transparent gradient background */
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Adds a subtle border for contrast */
+  backdrop-filter: blur(10px); /* Adds glass-like effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+/* Title styling */
+.dashboard-title {
+  text-align: center;
+  color: #333;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Card styling */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-footer {
+  background-color: inherit;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Card Types - Primary, Warning, Success, etc. */
+.primary-card {
+  background-color: #007bff;
+}
+
+.warning-card {
+  background-color: #ffc107;
+}
+
+.success-card {
+  background-color: #28a745;
+}
+
+.danger-card {
+  background-color: #dc3545;
+}
+
+.info-card {
+  background-color: #17a2b8;
+}
+
+/* Flexbox layout for the row of cards */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0;
+  flex-wrap: wrap; /* Ensures wrapping behavior */
+}
+
+/* Second row of cards */
+.row.mt-4 {
+  margin-top: 40px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
   .row {
-    display: flex;
-    justify-content: space-between; /* Equal spacing between cards */
-    gap: 20px; /* Space between cards */
-    margin: 0; /* Remove extra margin */
+      flex-direction: column;
+      gap: 20px;
   }
-  
-  .card-title {
-    font-size: 18px; /* Adjust font size for title */
-    font-weight: bold; /* Bold title */
-    text-align: center;
+
+  .card {
+      width: 100%;
   }
-  
-  .card-text {
-    text-align: center; /* Center-align card content */
-    font-size: 14px; /* Adjust font size */
-    opacity: 0.8; /* Subtle text style */
-  }
-  
-  .row.mb-4 {
-    margin-bottom: 30px; /* Add spacing between first and second row */
-  }
-  
-  .dashboard-home .row:first-child .col-md-4 {
-    flex: 1; /* Equal width for top row cards */
-  }
-  
-  .dashboard-home .row:last-child .col-md-6 {
-    flex: 1; /* Equal width for bottom row cards */
-  }
-  
+}
+
+.card-title {
+  font-size: 22px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #555;
+  opacity: 0.8;
+}
+
+/* Hover effects for cards */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-footer {
+  font-size: 14px;
+  color: #fff;
+  background-color: inherit;
+  padding: 10px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Add spacing between cards */
+.row.mb-4 {
+  margin-bottom: 40px;
+}
+
+/* Scrollable content area for custom cards */
+.card.custom-card .card-body {
+  overflow-y: auto;
+  max-height: 350px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #333;
+}
+
+.card.custom-card .card-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card.custom-card .card-body::-webkit-scrollbar-thumb {
+  background-color: #ff758c;
+  border-radius: 10px;
+}

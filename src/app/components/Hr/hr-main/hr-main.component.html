@@ -1,62 +1,89 @@
 <div class="dashboard-home container">
-    <h4>Dashboard</h4>
+    <h4 class="dashboard-title">Dashboard</h4>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-10">
-            </div>
-        </div>
+        <!-- Five Top Cards -->
         <div class="row">
             <div class="col-md-2 mb-3">
-                <div class="card ">
-                    <div class="card-body py-5">Primary Card</div>
+                <div class="card primary-card">
+                    <div class="card-body">
+                        <h3><i class="bi bi-file-earmark-person"></i> </h3>
+                        Candidates under Review
+                    </div>
                     <div class="card-footer d-flex">
-                        View Details
+                        {{ underReviewCount }}
                     </div>
                 </div>
             </div>
             <div class="col-md-2 mb-3">
-                <div class="card ">
-                    <div class="card-body py-5">Warning Card</div>
+                <div class="card warning-card">
+                    <div class="card-body">
+                        <h3><i class="bi bi-check-circle"></i></h3>
+                        Cleared Candidates
+                    </div>
                     <div class="card-footer d-flex">
-                        View Details
+                        {{ clearedCount }}
                     </div>
                 </div>
             </div>
             <div class="col-md-2 mb-3">
-                <div class="card ">
-                    <div class="card-body py-5">Success Card</div>
+                <div class="card success-card">
+                    <div class="card-body">
+                        <h3><i class="bi bi-pencil-square"></i> </h3>
+                        Applied Candidates
+                    </div>
                     <div class="card-footer d-flex">
-                        View Details
+                        {{ appliedCount }}
                     </div>
                 </div>
             </div>
             <div class="col-md-2 mb-3">
-                <div class="card ">
-                    <div class="card-body py-5">Danger Card</div>
+                <div class="card danger-card">
+                    <div class="card-body">
+                        <h3><i class="bi bi-x-circle"></i></h3>
+                        Rejected Candidates
+                    </div>
                     <div class="card-footer d-flex">
-                        View Details
+                        {{ rejectedCount }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3">
+                <div class="card info-card">
+                    <div class="card-body">
+                        <h3><i class="bi bi-person-check"></i></h3>
+                        Onboarded Candidates
+                    </div>
+                    <div class="card-footer d-flex">
+                        {{ onboardedCount }}
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <!-- Second Row: 2 Cards -->
-            <div class="col-md-6">
-                <div class="card">
+        <!-- Second Row: 2 Cards (Start a little below the first row) -->
+        <div class="row mt-4">
+            <div class="col-md-6 mb-2">
+                <div class="card custom-card">
                     <div class="card-body">
-                        <h5 class="card-title">Card 4</h5>
-                        <p class="card-text">Content for Card 4</p>
+                        <div class="card-header">
+                            <i class="bi bi-calendar-check"></i> <!-- Icon for Upcoming Interviews -->
+                            Upcoming Interviews
+                        </div>
+                        <app-upcoming-interview></app-upcoming-interview>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card">
+            <div class="col-md-5 mb-1">
+                <div class="card custom-card">
                     <div class="card-body">
-                        <h5 class="card-title">Card 5</h5>
-                        <p class="card-text">Content for Card 5</p>
+                        <h5 class="card-title">
+                            <i class="bi bi-info-circle"></i> <!-- Icon for Card 6 -->
+                            Card 6
+                        </h5>
+                        <p class="card-text">Content for Card 6</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
